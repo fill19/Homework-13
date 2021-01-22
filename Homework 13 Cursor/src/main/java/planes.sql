@@ -8,7 +8,7 @@ CREATE TABLE planes
     id                 serial primary key,
     airportid          integer references airport (id)
 );
-DROP TABLE planes;
+
 
 CREATE TABLE pilots
 (
@@ -18,7 +18,7 @@ CREATE TABLE pilots
     id          serial primary key,
     airportid   integer references airport (id)
 );
-DROP TABLE pilots;
+
 
 CREATE TABLE airport
 (
