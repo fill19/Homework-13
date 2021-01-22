@@ -3,7 +3,7 @@ USE jdbc;
 CREATE TABLE planes
 (
     model              varchar(25),
-    serial_number_name INT,
+    serial_number_name TEXT,
     seats_name         INT,
     id                 serial primary key,
     airportid          integer references airport (id)
@@ -14,7 +14,7 @@ CREATE TABLE pilots
 (
     pilots_name TEXT    NOT NULL,
     age         TINYINT NOT NULL,
-    models      TEXT    NOT NULL,
+    models      varchar(3)    NOT NULL,
     id          serial primary key,
     airportid   integer references airport (id)
 );
